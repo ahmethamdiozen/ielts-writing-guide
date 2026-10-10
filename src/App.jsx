@@ -18,7 +18,7 @@ export default function App() {
         <Route path="/task1/:section?" element={<Task1Page query={query} />} />
         <Route path="/task2/:section?" element={<Task2Page query={query} />} />
         <Route path="/practice" element={<PracticePage />} />
-        <Route path="/connect" element={<ConnectPage />} />
+        <Route path="/connect/:chart?" element={<ConnectPage />} />
         <Route path="*" element={<Navigate to="/task1" replace />} />
       </Routes>
     </>

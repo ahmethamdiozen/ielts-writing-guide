@@ -73,19 +73,3 @@ export const relations = [
     ],
   },
 ]
-
-// Alıştırma: iki cümle verilir, ilişkiyi seçersin. `also` kabul edilen diğer cevaplar.
-export const pairs = [
-  { id: 'p1', a: 'Internet use among men in Sweden was 92%.', b: 'Internet use among men in India was only 45%.', answer: 'contrast', why: 'Biri çok yüksek, diğeri çok düşük. İki ülke zıt değerde olduğu için karşıtlık.' },
-  { id: 'p2', a: 'Car ownership rose sharply in urban areas.', b: 'Car ownership remained stable in rural areas.', answer: 'contrast', why: 'Kentte hızlı artış, kırsalda sabit. Farklı eğilimler karşıtlık bağlacıyla anlatılır.' },
-  { id: 'p3', a: 'Laptop sales doubled between 2010 and 2020.', b: 'Tablet sales also grew strongly over the same period.', answer: 'addition', why: 'İkinci cümle aynı yönde ek bilgi veriyor; karşıtlık yok, yalnızca ekleme.' },
-  { id: 'p4', a: 'The village gained a new supermarket.', b: 'A large housing estate was built to the north.', answer: 'addition', why: 'İki yeni değişiklik sıralanıyor; ikisi de aynı yönde (genişleme).' },
-  { id: 'p5', a: 'Around 85% of men in the UK used the internet daily.', b: 'Around 82% of women in the UK used the internet daily.', answer: 'similarity', why: 'İki değer birbirine çok yakın; benzerliği vurgulamak istiyoruz.' },
-  { id: 'p6', a: 'Food spending in Mexico fell by 10%.', b: 'Food spending in India fell by 12%.', answer: 'similarity', why: 'İki ülkede de benzer düşüş var. Aynı eğilimi bağlaçla göstermek mantıklı.' },
-  { id: 'p7', a: 'The mixture is heated for several hours.', b: 'It becomes a smooth liquid.', answer: 'result', why: 'Isıtma işleminin doğal sonucu. Process\'te neden-sonuç açıktır, kullanılabilir.' },
-  { id: 'p8', a: 'The beans are fermented for a week.', b: 'Their bitter taste is reduced.', answer: 'result', why: 'Fermantasyonun sonucu. İkinci cümle birincinin etkisini anlatıyor.' },
-  { id: 'p9', a: 'Unemployment fell steadily after 2010.', b: 'It remained higher than in 2000.', answer: 'concession', also: ['contrast'], why: 'Düşüş bir iyileşme beklentisi yaratıyor ama hâlâ yüksek. "Although" ile verilir; contrast da kabul edilebilir.' },
-  { id: 'p10', a: 'Rail fares became more expensive.', b: 'The number of passengers continued to grow.', answer: 'concession', also: ['contrast'], why: 'Pahalılaşma yolcu azalması beklentisi yaratır; tersi oldu. Ödün ilişkisi.' },
-  { id: 'p11', a: 'The beans are dried in the sun.', b: 'They are roasted at a high temperature.', answer: 'sequence', why: 'Adımlar sırayla gerçekleşiyor; process\'te sıra bağlaçları kullanılır.' },
-  { id: 'p12', a: 'Visitor numbers peaked at 550,000 in 2015.', b: 'They fell to 400,000 by 2020.', answer: 'sequence', also: ['contrast'], why: 'Önce zirve, sonra düşüş: zaman sırası. Karşıtlıkla da anlatılabilir.' },
-]
