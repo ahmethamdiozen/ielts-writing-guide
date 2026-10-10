@@ -72,7 +72,7 @@ export default [
       'The majority of respondents preferred online shopping.',
       'The majority of households owned a car.',
       'The majority of energy came from fossil fuels.',
-      'The vast majority of students were under 25.',
+      'The majority of students were under 25.',
     ],
     {
       note: '"The majority of + the/these + çoğul isim". Sayılamayan isimle de kullanılır: "the majority of energy".',
