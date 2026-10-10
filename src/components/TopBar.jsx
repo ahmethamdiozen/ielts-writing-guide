@@ -27,8 +27,9 @@ export default function TopBar({ query, onQuery }) {
         <NavLink to="/task1" className={({ isActive }) => `tab tab-1${isActive ? ' active' : ''}`}>Task 1</NavLink>
         <NavLink to="/task2" className={({ isActive }) => `tab tab-2${isActive ? ' active' : ''}`}>Task 2</NavLink>
         <NavLink to="/practice" className={({ isActive }) => `tab tab-3${isActive ? ' active' : ''}`}>Alıştırma</NavLink>
+        <NavLink to="/connect" className={({ isActive }) => `tab tab-3${isActive ? ' active' : ''}`}>Bağlaç</NavLink>
       </nav>
-      {pathname.startsWith('/practice') ? <div className="search" /> : <SearchBox query={query} onQuery={onQuery} />}
+      {(pathname.startsWith('/practice') || pathname.startsWith('/connect')) ? <div className="search" /> : <SearchBox query={query} onQuery={onQuery} />}
       <button type="button" className="theme-btn" onClick={toggle} title="Temayı değiştir">
         <span className="visually-hidden">Tema: </span>
         {effective === 'dark' ? 'Açık' : 'Koyu'}
