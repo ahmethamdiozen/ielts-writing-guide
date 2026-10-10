@@ -264,3 +264,16 @@ fieldset.field label { display: flex; gap: .5rem; align-items: center; font-weig
 .tagchip { display: inline-block; padding: .05rem .55rem; border-radius: 999px; font: 600 .8rem var(--font-ui); border: 1.5px solid var(--accent); color: var(--accent); margin-right: .3rem; }
 .place-list { list-style: none; padding: 0; display: grid; gap: 1rem; }
 .place-item .feedback { margin: .5rem 0 0; }
+.cand { display: flex; gap: .6rem; align-items: flex-start; padding: .6rem .8rem; border: 2px solid var(--line); border-radius: 8px; background: var(--surface); margin-bottom: .5rem; font-weight: 400; }
+.cand.ok { border-color: var(--accent-2); }
+.cand.bad { border-color: var(--warn-line); background: var(--warn-bg); }
+.cand-why { display: block; margin-top: .3rem; color: var(--ink-soft); font-family: var(--font-text); }
+.essay-para { margin: .5rem 0; }
+.sent { display: inline; }
+.rolechip { display: inline-block; margin-right: .3rem; padding: 0 .45rem; border-radius: 999px; font: 700 .72rem var(--font-ui); color: #fff; background: var(--accent); vertical-align: 1px; }
+.role-point .rolechip, .role-thesis .rolechip { background: var(--accent-1); }
+.role-explain .rolechip { background: var(--accent-2); }
+.role-example .rolechip { background: var(--accent-3); }
+.role-link .rolechip, .role-wrap .rolechip { background: var(--ink-soft); }
+.role-paraphrase .rolechip, .role-restate .rolechip { background: var(--accent-1); }
+.toggle { display: flex; gap: .5rem; align-items: center; font-family: var(--font-ui); margin-bottom: .5rem; }
