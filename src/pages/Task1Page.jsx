@@ -77,8 +77,12 @@ function ChartGuide({ chart }) {
 export default function Task1Page({ query }) {
   const { section = 'approach' } = useParams()
   const [learned, setLearned] = useLocalStorage('learned-v1', [])
-  const toggle = (id) => setLearned((l) => (l.includes(id) ? l.filter((x) => x !== id) : [...l, id]))
-  const learnedSet = new Set(Array.isArray(learned) ? learned : [])
+  const clean = (l) => (Array.isArray(l) ? l.filter((x) => typeof x === 'string') : [])
+  const toggle = (id) => setLearned((l) => {
+    const a = clean(l)
+    return a.includes(id) ? a.filter((x) => x !== id) : [...a, id]
+  })
+  const learnedSet = new Set(clean(learned))
   const q = query.trim()
 
   const groups = [

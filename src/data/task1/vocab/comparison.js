@@ -80,7 +80,7 @@ export default [
       'Compared with 1990, the number of graduates in 2010 was double.',
       'Spain produced less wheat compared with France.',
       'Compared to women, men spent more time on sport.',
-      'Compared with the other countries, Canada had the highest recycling rate.',
+      'Compared with the other countries, Canada had a high recycling rate.',
     ],
     {
       forms: ['compared with', 'compared to'],
@@ -123,7 +123,7 @@ export default [
       mistake: '"However" bir bağlaç değildir; iki cümleyi virgülle birleştirme. Nokta ya da noktalı virgül kullan.',
     }),
   e('conversely', 'tersine; bunun tam tersi olarak',
-    'İki durumun tam ters olduğunu göstermek için. Akademik ve güçlü bir zıtlık bağlacıdır; yılda bir kez kullanılacak kadar nadir tut.',
+    'İki durumun tam ters olduğunu göstermek için. Akademik ve güçlü bir zıtlık bağlacıdır; tüm yazıda en fazla bir kez kullan.',
     ['bar', 'line', 'table'],
     [
       'Car sales rose in Asia. Conversely, they fell sharply in Europe.',

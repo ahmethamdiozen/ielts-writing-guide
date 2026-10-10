@@ -50,6 +50,13 @@ describe('task 1 page', () => {
     fireEvent.click(screen.getAllByRole('button', { name: /öğrendim/i })[0])
     expect(progress()).toHaveTextContent('1/12')
   })
+  test.each(['{}', '5', 'null', '"abc"'])('corrupt learned storage (%s) does not crash on toggle', (raw) => {
+    localStorage.setItem('learned-v1', raw)
+    at('/task1/comparison')
+    fireEvent.click(screen.getAllByRole('button', { name: /öğrendim/i })[0])
+    expect(h1()).toHaveTextContent(/Task 1/i)
+    expect(screen.getByLabelText('İlerleme')).toHaveTextContent('1/12')
+  })
   test('chart guide renders sample', () => {
     at('/task1/chart-pie')
     expect(screen.getByRole('heading', { level: 2, name: 'Pie chart' })).toBeInTheDocument()

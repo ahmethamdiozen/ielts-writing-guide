@@ -165,7 +165,7 @@ export default {
   timing: [
     'Task 2 için 40 dakika ayır (Task 1\'e 20 dakika).',
     '3–5 dk: soruyu analiz et, görüşünü ve ana fikirleri planla.',
-    '30 dk: yaz (giriş 4 dk, body paragrafları 10 dk her biri, sonuç 3 dk).',
+    '30 dk: yaz (giriş 5 dk, body paragrafları 10 dk her biri, sonuç 5 dk).',
     '3–5 dk: kontrol et: dil bilgisi, kelime sayısı, yazım ve soruya cevap.',
   ],
   checklist: [

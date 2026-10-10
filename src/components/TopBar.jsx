@@ -27,7 +27,8 @@ export default function TopBar({ query, onQuery }) {
         <NavLink to="/task2" className={({ isActive }) => `tab tab-2${isActive ? ' active' : ''}`}>Task 2</NavLink>
       </nav>
       <SearchBox query={query} onQuery={onQuery} />
-      <button type="button" className="theme-btn" onClick={toggle} aria-label="Temayı değiştir" title="Temayı değiştir">
+      <button type="button" className="theme-btn" onClick={toggle} title="Temayı değiştir">
+        <span className="visually-hidden">Tema: </span>
         {effective === 'dark' ? 'Açık' : 'Koyu'}
       </button>
     </header>

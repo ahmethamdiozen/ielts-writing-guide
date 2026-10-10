@@ -29,7 +29,7 @@ export default [
       'Sales peaked at around 600 units.',
     ],
     { note: '"About" ile eşanlamlıdır ancak "around" yazılı dilde daha tercih edilir.' }),
-  e('just over', 'biraz üstünde; hemen hemen',
+  e('just over', 'biraz üstünde; azıcık fazla',
     'Verinin bir sayının hemen üstünde olduğunu söyler. Grafikte çizgi tam değeri geçerken çok işe yarar.',
     ['all'],
     [

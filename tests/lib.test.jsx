@@ -26,3 +26,8 @@ test('highlight multi-word and inflected forms', () => {
   const { container } = render(<Highlighted text="Sales soared sharply. In contrast, costs fell." terms={['in contrast', 'soared', '']} />)
   expect([...container.querySelectorAll('mark')].map(m => m.textContent)).toEqual(['soared', 'In contrast'])
 })
+
+test('highlight does not match inside longer words', () => {
+  const { container } = render(<Highlighted text="Meanwhile, enterprise sales rise while costs fall." terms={['while', 'rise']} />)
+  expect([...container.querySelectorAll('mark')].map(m => m.textContent)).toEqual(['rise', 'while'])
+})

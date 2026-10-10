@@ -94,7 +94,7 @@ export default [
     'Kademeli, istikrarlı düşüş için en uygun fiil. Fiil ve isim olarak kullanılır. Akademik tonu güçlüdür.',
     ['line', 'bar', 'table'],
     [
-      'The number of smokers declined from 30% to 18%.',
+      'The proportion of smokers declined from 30% to 18%.',
       'There was a gradual decline in newspaper sales.',
       'Birth rates declined steadily throughout the 1990s.',
       'Demand for coal has declined by half since 2000.',

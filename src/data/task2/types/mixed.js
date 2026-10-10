@@ -34,7 +34,7 @@ export default {
     'Bileşenleri aynı paragrafta karıştırmak.',
     'Görüş sorusu varsa görüşü açık bildirmemek.',
     'Her bileşene eşit ağırlık vermemek.',
-    'Dört ya da beş paragraf yazıp ana fikirleri dağıtmak.',
+    'Her bileşene ayrı paragraf ayırmayıp ana fikirleri tek paragrafta dağıtmak.',
   ],
   sample: {
     question: 'Some people believe that the rise of online shopping is damaging local high streets. What are the causes of this development, and what are its effects? What can be done to protect local shops?',

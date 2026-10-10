@@ -34,7 +34,7 @@ export default {
     'Görüşü net bildirmemek ya da paragraflar arasında görüş değiştirmek.',
     'Sadece "I think" cümleleriyle devam etmek; neden ve örnek eksik kalmak.',
     'Soruyu kopyalamak.',
-    '"To what extent" sorusunda tamamen katılıp tamamen katılmamaktan korkmak; kısmen katılmak da geçerlidir ama net olmalı.',
+    '"To what extent" sorusunda sadece uç görüşlerin geçerli olduğunu sanmak; kısmen katılmak da geçerlidir ama hangi noktada katıldığını net yazmalısın.',
     'Konudan sapmak; sorulan görüşü değil genel konuyu yazmak.',
     'Memorize edilmiş şablonları zorla uydurmak.',
   ],

@@ -68,7 +68,7 @@ export default [
       'Overall, the figures for women were higher than those for men.',
     ],
     {
-      note: 'Cümle başında virgülle. Alternatifleri: In general, As a general trend, Overall.',
+      note: 'Cümle başında virgülle. Alternatifleri: In general, As a general trend.',
       mistake: 'Overview\'de detay rakam verme; genel eğilimi anlat.',
     }),
   e('in summary', 'özetle',
