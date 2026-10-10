@@ -11,7 +11,7 @@ export default function SideNav({ base, groups }) {
       <nav className={`sidenav-list${open ? ' open' : ''}`} aria-label="Bölümler">
         {groups.map((g) => (
           <div key={g.title} className="sidenav-group">
-            <div className="sidenav-title">{g.title}</div>
+            <h2 className="sidenav-title">{g.title}</h2>
             {g.items.map((it) => (
               <NavLink key={it.id} to={`${base}/${it.id}`} onClick={() => setOpen(false)}
                 className={({ isActive }) => `sidenav-link${isActive ? ' active' : ''}`}>

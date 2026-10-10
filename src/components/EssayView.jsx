@@ -27,7 +27,7 @@ export default function EssayView({ type, query }) {
 
       <section>
         <h3>Thesis kalıpları</h3>
-        <ul className="examples">{type.thesis.map((t) => <li key={t}>{t}</li>)}</ul>
+        <ul className="examples">{type.thesis.map((t) => <li key={t} lang="en">{t}</li>)}</ul>
       </section>
 
       <section>
@@ -35,7 +35,7 @@ export default function EssayView({ type, query }) {
         <ul className="phrases">
           {type.phrases.map((p) => (
             <li key={p.en}>
-              <span className="phrase-en"><Highlighted text={p.en} terms={query ? [query] : []} /></span>
+              <span className="phrase-en" lang="en"><Highlighted text={p.en} terms={query ? [query] : []} /></span>
               <span className="phrase-tr">{p.tr}</span>
               <span className="tag">{p.use}</span>
             </li>
@@ -50,8 +50,8 @@ export default function EssayView({ type, query }) {
 
       <section>
         <h3>Örnek soru ve model essay</h3>
-        <p className="prompt">{type.sample.question}</p>
-        <div className="sample">
+        <p className="prompt" lang="en">{type.sample.question}</p>
+        <div className="sample" lang="en">
           {type.sample.text.split('\n\n').map((p, i) => <p key={i}>{p}</p>)}
         </div>
       </section>

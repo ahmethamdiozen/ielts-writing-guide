@@ -36,7 +36,7 @@ function General() {
       </div>
 
       <h3>Thesis formülleri</h3>
-      <ul className="examples">{general.thesisFormulas.map((t) => <li key={t}>{t}</li>)}</ul>
+      <ul className="examples">{general.thesisFormulas.map((t) => <li key={t} lang="en">{t}</li>)}</ul>
       <h3>Tutarlılık ve bağlantı</h3>
       <ul>{general.cohesion.map((t) => <li key={t}>{t}</li>)}</ul>
       <h3>Dil bilgisi çeşitliliği</h3>
@@ -83,7 +83,7 @@ export default function Task2Page({ query }) {
           <ul className="phrases">
             {found.map((r) => (
               <li key={r.key}>
-                <span className="phrase-en"><Highlighted text={r.en} terms={[q]} /></span>
+                <span className="phrase-en" lang="en"><Highlighted text={r.en} terms={[q]} /></span>
                 {r.tr && <span className="phrase-tr">{r.tr}</span>}
                 <span className="tag">{r.label}</span>
               </li>

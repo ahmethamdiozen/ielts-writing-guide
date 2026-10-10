@@ -22,7 +22,7 @@ function Approach() {
           <li key={t.part}>
             <strong>{t.part}</strong>
             <p>{t.goal}</p>
-            <p className="example-line">{t.example}</p>
+            <p className="example-line" lang="en">{t.example}</p>
           </li>
         ))}
       </ol>
@@ -66,8 +66,8 @@ function ChartGuide({ chart }) {
         ))}
       </div>
       <h3>Örnek soru ve model cevap</h3>
-      <p className="prompt">{chart.sample.prompt}</p>
-      <div className="sample">
+      <p className="prompt" lang="en">{chart.sample.prompt}</p>
+      <div className="sample" lang="en">
         {chart.sample.text.split('\n\n').map((p, i) => <p key={i}>{p}</p>)}
       </div>
     </div>

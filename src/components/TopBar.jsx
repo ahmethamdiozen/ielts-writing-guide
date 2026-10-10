@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import SearchBox from './SearchBox.jsx'
 import { useLocalStorage } from '../lib/useLocalStorage.js'
 
@@ -9,6 +9,7 @@ const prefersDark = () => {
 
 export default function TopBar({ query, onQuery }) {
   const [theme, setTheme] = useLocalStorage('theme', 'auto')
+  const { pathname } = useLocation()
 
   useEffect(() => {
     const root = document.documentElement
@@ -25,8 +26,9 @@ export default function TopBar({ query, onQuery }) {
       <nav className="tasks" aria-label="Ana menü">
         <NavLink to="/task1" className={({ isActive }) => `tab tab-1${isActive ? ' active' : ''}`}>Task 1</NavLink>
         <NavLink to="/task2" className={({ isActive }) => `tab tab-2${isActive ? ' active' : ''}`}>Task 2</NavLink>
+        <NavLink to="/practice" className={({ isActive }) => `tab tab-3${isActive ? ' active' : ''}`}>Alıştırma</NavLink>
       </nav>
-      <SearchBox query={query} onQuery={onQuery} />
+      {pathname.startsWith('/practice') ? <div className="search" /> : <SearchBox query={query} onQuery={onQuery} />}
       <button type="button" className="theme-btn" onClick={toggle} title="Temayı değiştir">
         <span className="visually-hidden">Tema: </span>
         {effective === 'dark' ? 'Açık' : 'Koyu'}

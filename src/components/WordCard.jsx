@@ -24,7 +24,7 @@ export default function WordCard({ entry, learned, onToggle, query, categoryTitl
       {entry.note && <p className="word-note"><strong>Kural:</strong> {entry.note}</p>}
       {entry.mistake && <Callout tone="warn" title="Sık hata">{entry.mistake}</Callout>}
       <ul className="examples">
-        {entry.examples.map((ex) => <li key={ex}><Highlighted text={ex} terms={marks} /></li>)}
+        {entry.examples.map((ex) => <li key={ex} lang="en"><Highlighted text={ex} terms={marks} /></li>)}
       </ul>
     </article>
   )

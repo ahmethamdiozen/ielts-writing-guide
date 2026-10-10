@@ -85,3 +85,54 @@ describe('task 2 page', () => {
     expect(screen.getByText('Sonuç bulunamadı')).toBeInTheDocument()
   })
 })
+
+describe('practice page', () => {
+  test('tab exists and setup shows start button', () => {
+    at('/practice')
+    expect(h1()).toHaveTextContent(/Alıştırma/i)
+    expect(screen.getByRole('button', { name: 'Başla' })).toBeInTheDocument()
+  })
+  test('full session: answer, finish, see score', () => {
+    at('/practice')
+    fireEvent.click(screen.getByRole('button', { name: 'Başla' }))
+    for (let i = 0; i < 10; i++) {
+      fireEvent.change(screen.getByLabelText('Cevabın'), { target: { value: 'zzz' } })
+      fireEvent.click(screen.getByRole('button', { name: 'Kontrol et' }))
+      expect(screen.getByRole('status')).toHaveTextContent(/Doğru cevap/)
+      fireEvent.click(screen.getByRole('button', { name: i === 9 ? 'Sonucu gör' : 'Sonraki' }))
+    }
+    expect(screen.getByRole('heading', { level: 2, name: /Sonuç/ })).toBeInTheDocument()
+    expect(screen.getByText(/0\s*\/\s*10/)).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /Yanlışları tekrar çöz/ })).toBeInTheDocument()
+  })
+  test('learned-only mode with nothing learned shows guidance, no crash', () => {
+    at('/practice')
+    fireEvent.click(screen.getByLabelText(/Öğrendim dediklerim/))
+    fireEvent.click(screen.getByRole('button', { name: 'Başla' }))
+    expect(screen.getByText(/henüz .* işaretlemedin/i)).toBeInTheDocument()
+  })
+  test('corrupt learned storage does not crash practice', () => {
+    localStorage.setItem('learned-v1', '{}')
+    at('/practice')
+    fireEvent.click(screen.getByLabelText(/Öğrendim dediklerim/))
+    fireEvent.click(screen.getByRole('button', { name: 'Başla' }))
+    expect(h1()).toHaveTextContent(/Alıştırma/i)
+  })
+})
+
+describe('polish', () => {
+  test('search clears when navigating to another section', () => {
+    at('/task1/approach')
+    search('whil')
+    fireEvent.click(screen.getByRole('link', { name: /Benzerlik/ }))
+    expect(screen.getByRole('searchbox')).toHaveValue('')
+  })
+  test('english examples are marked lang=en', () => {
+    const { container } = at('/task1/comparison')
+    expect(container.querySelector('.examples li[lang="en"]')).not.toBeNull()
+  })
+  test('side nav group titles are headings', () => {
+    at('/task1/approach')
+    expect(screen.getByRole('heading', { level: 2, name: 'Kelime bankası' })).toBeInTheDocument()
+  })
+})

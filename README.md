@@ -8,6 +8,7 @@ Canlı site: https://ahmethamdiozen.github.io/ielts-writing-guide/
 
 - **Task 1:** yaklaşım rehberi, 11 kategoride kelime ve bağlaç bankası (her kelimede anlam, ne zaman kullanılır, kural, sık hata ve 3–5 örnek), 7 grafik türü için rehber ve model cevap.
 - **Task 2:** 7 essay türü (opinion, discussion, advantages/disadvantages, problem/solution, two-part, positive/negative development, mixed) ve genel rehber (puanlama kriterleri, fikir üretme, kontrol listesi).
+- Alıştırma sekmesi: örnek cümlelerden otomatik boşluk doldurma (kategori ya da "öğrendim" listesine göre).
 - Arama, "öğrendim" işareti (tarayıcıda saklanır), koyu/açık tema, mobil uyum.
 
 ## Geliştirme
