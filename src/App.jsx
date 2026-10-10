@@ -5,6 +5,7 @@ import Task1Page from './pages/Task1Page.jsx'
 import Task2Page from './pages/Task2Page.jsx'
 import PracticePage from './pages/PracticePage.jsx'
 import ConnectPage from './pages/ConnectPage.jsx'
+import Walk1Page from './pages/Walk1Page.jsx'
 
 export default function App() {
   const [query, setQuery] = useState('')
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/task2/:section?" element={<Task2Page query={query} />} />
         <Route path="/practice" element={<PracticePage />} />
         <Route path="/connect/:chart?" element={<ConnectPage />} />
+        <Route path="/t1-yol/:chart?" element={<Walk1Page />} />
         <Route path="*" element={<Navigate to="/task1" replace />} />
       </Routes>
     </>

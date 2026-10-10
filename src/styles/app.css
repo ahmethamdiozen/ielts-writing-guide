@@ -217,7 +217,7 @@ fieldset.field label { display: flex; gap: .5rem; align-items: center; font-weig
 .c-text { fill: var(--ink); font-family: var(--font-ui); }
 .c-grid { stroke: var(--line); stroke-width: 1; }
 .s0 { fill: var(--accent-1); } .s1 { fill: var(--accent-3); } .s2 { fill: var(--accent-2); } .s3 { fill: var(--marker); }
-.l0 { stroke: var(--accent-1); } .l1 { stroke: var(--accent-3); } .l2 { stroke: var(--accent-2); }
+.l0 { stroke: var(--accent-1); } .l1 { stroke: var(--accent-3); } .l2 { stroke: var(--accent-2); } .l3 { stroke: var(--marker); }
 .pies { display: flex; flex-wrap: wrap; gap: .8rem; }
 .pies .pie-svg { flex: 1 1 220px; max-width: 260px; }
 .legend { display: flex; flex-wrap: wrap; gap: 1rem; list-style: none; padding: 0; margin: .6rem 0; font-family: var(--font-ui); }
@@ -244,3 +244,23 @@ fieldset.field label { display: flex; gap: .5rem; align-items: center; font-weig
 .chart-svg, .pies, .table-wrap, .process { margin-bottom: 1.5rem; }
 .swatch.s0 { background: var(--accent-1); } .swatch.s1 { background: var(--accent-3); }
 .swatch.s2 { background: var(--accent-2); } .swatch.s3 { background: var(--marker); }
+
+/* Adım adım yazma yolu */
+.walk-step { margin: 2.2rem 0; }
+.walk-step h2 { display: flex; gap: .6rem; align-items: center; }
+.walk-num {
+  flex: none; width: 2rem; height: 2rem; border-radius: 50%; display: grid; place-items: center;
+  background: var(--accent); color: #fff; font: 800 1rem var(--font-ui);
+}
+.notes textarea {
+  padding: .6rem .8rem; border: 2px solid var(--line); border-radius: 8px; background: var(--surface);
+  color: var(--ink); font: inherit; resize: vertical;
+}
+.reveal-body { margin-top: .6rem; padding: .8rem 1rem; background: var(--surface); border: 2px solid var(--line); border-radius: 12px; }
+.qa dt { font-weight: 600; font-family: var(--font-ui); margin-top: .5rem; }
+.qa dd { margin: .1rem 0 .3rem; }
+.findings { list-style: none; padding: 0; display: grid; gap: .5rem; }
+.findings li.skipped { opacity: .75; }
+.tagchip { display: inline-block; padding: .05rem .55rem; border-radius: 999px; font: 600 .8rem var(--font-ui); border: 1.5px solid var(--accent); color: var(--accent); margin-right: .3rem; }
+.place-list { list-style: none; padding: 0; display: grid; gap: 1rem; }
+.place-item .feedback { margin: .5rem 0 0; }

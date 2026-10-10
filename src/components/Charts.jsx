@@ -19,7 +19,8 @@ export function BarChart({ chart, alt }) {
   const pw = W - m.l - m.r, ph = H - m.t - m.b
   const y = (v) => m.t + ph * (1 - v / chart.max)
   const n = chart.categories.length, k = chart.series.length
-  const gw = pw / n, bw = 26, gap = 4
+  const gw = pw / n, gap = 4
+  const bw = Math.min(26, (gw - 12 - (k - 1) * gap) / k)
   const groupW = k * bw + (k - 1) * gap
   return (
     <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={alt} className="chart-svg">
@@ -39,7 +40,7 @@ export function BarChart({ chart, alt }) {
               return (
                 <g key={s.name}>
                   <rect x={x} y={y(v)} width={bw} height={y(0) - y(v)} className={`s${si}`} />
-                  <text x={x + bw / 2} y={y(v) - 4} textAnchor="middle" fontSize="11" className="c-text">{v}</text>
+                  <text x={x + bw / 2} y={y(v) - 4} textAnchor="middle" fontSize={bw < 20 ? 10 : 11} className="c-text">{v}</text>
                 </g>
               )
             })}
@@ -75,7 +76,7 @@ export function LineChart({ chart, alt }) {
           {s.values.map((v, i) => <circle key={i} cx={x(i)} cy={y(v)} r="4" className={`s${si}`} />)}
         </g>
       ))}
-      <text x={m.l} y={m.t - 8} fontSize="11" className="c-text">Visitors ({chart.unit})</text>
+      <text x={m.l} y={m.t - 8} fontSize="11" className="c-text">{chart.yLabel ?? `Visitors (${chart.unit})`}</text>
     </svg>
   )
 }
