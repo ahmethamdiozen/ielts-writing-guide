@@ -1,0 +1,92 @@
+import { entry } from './_entry.js'
+const e = entry('addition')
+
+export default [
+  e('also', 'ayrıca; de',
+    'Aynı cümlede ek bir bilgi vermek için en yaygın zarf. Fiilin önünde ya da "to be" fiilinden sonra gelir. Cümle başında da kullanılabilir ama ortada daha doğaldır.',
+    ['all'],
+    [
+      'Sales of laptops rose by 20% and sales of tablets also increased.',
+      'Spending on health also grew steadily over the period.',
+      'The UK was also among the top three producers.',
+      'Italy also saw a slight rise in the number of visitors.',
+    ],
+    {
+      note: '"Also" fiilin önüne (olağan fiil) ya da "to be"den sonra gelir: "was also", "also increased". Cümle sonunda kullanma.',
+      mistake: 'Cümle sonunda "also" kullanma; "too" kullan. Yanlış: "Spain rose also". Doğru: "Spain also rose."',
+    }),
+  e('moreover', 'dahası; üstelik',
+    'Önceki bilgiye ek ve genelde daha önemli bir bilgi eklemek için kullanılır. Akademik tondadır; Task 1\'de nadiren, vurgu için kullan.',
+    ['all'],
+    [
+      'Sales rose by 15%. Moreover, profits doubled.',
+      'The number of students rose. Moreover, the proportion of women reached a record high.',
+      'Moreover, the gap between rich and poor narrowed over the decade.',
+    ],
+    {
+      note: 'Cümle başında ve virgülle. Önceki cümleyle aynı yönde olmalı.',
+      mistake: '"Moreover" zıt bir bilgi için kullanılmaz. Zıtlık için "however" / "in contrast".',
+    }),
+  e('furthermore', 'ayrıca; bunun yanında',
+    '"Moreover" ile aynı işlevdedir. İki bağlacı peş peşe kullanmak yerine birini seç. Task 1\'de aşırı resmî durabilir; ölçülü kullan.',
+    ['all'],
+    [
+      'Tourism grew by 5%. Furthermore, hotel occupancy reached 80%.',
+      'Furthermore, the number of women graduates exceeded that of men.',
+      'The figure for cars rose. Furthermore, bicycle use also increased.',
+    ],
+    { note: 'Cümle başında virgülle kullanılır.' }),
+  e('in addition', 'buna ek olarak',
+    'Ek bir veri ya da kategori eklemek için. Hem cümle başında hem "in addition to + isim" biçiminde kullanılır. Task 1\'de gayet güvenli bir bağlaçtır.',
+    ['all'],
+    [
+      'Housing accounted for 30% of spending. In addition, transport made up 15%.',
+      'In addition to rent, households spent 12% on utilities.',
+      'In addition, the proportion of retired people rose slightly.',
+      'In addition to the UK, France also showed a rise in sales.',
+    ],
+    {
+      forms: ['in addition'],
+      note: '"In addition to" sonrası isim ya da -ing gelir. Yeni cümle başında "In addition," virgülle.',
+      mistake: '"In addition of" yanlıştır; doğru: "in addition to".',
+    }),
+  e('additionally', 'ek olarak',
+    '"In addition" ile aynı anlamdadır. Cümle başında ya da fiilden önce kullanılabilir.',
+    ['all'],
+    [
+      'Sales rose in Asia. Additionally, they grew in Africa.',
+      'Additionally, the number of retired workers increased slightly.',
+      'Women additionally accounted for 40% of managers.',
+    ],
+    { note: 'Cümle başında virgülle kullanılması en güvenli biçimdir.' }),
+  e('as well as', '-in yanı sıra; hem de',
+    'İki öğeyi tek cümlede bağlamak için. "And"den daha akademik durur. Ardından isim ya da -ing gelir.',
+    ['all'],
+    [
+      'Food as well as clothing saw a fall in spending.',
+      'The UK, as well as France, recorded a rise in output.',
+      'Men as well as women increased their online shopping.',
+      'Sales of laptops, as well as tablets, rose sharply.',
+    ],
+    {
+      note: 'Fiil, "as well as"dan önceki asıl özneye uyar: "The UK, as well as France, recorded..." (tekil).',
+    }),
+  e('besides', 'bunun dışında; ayrıca',
+    'Ek bir bilgi için kullanılır, ama gündelik tona yakındır. Task 1\'de nadir tercih edilir; çoğunlukla "in addition" daha güvenlidir.',
+    ['all'],
+    [
+      'Besides rent, households spent heavily on food.',
+      'Besides sugar, the country exported large amounts of coffee.',
+      'Besides the top three, several other countries also grew.',
+    ],
+    { note: '"Besides" edat olarak isimle kullanılır. Sınavda daha resmî alternatifler varken tercih etme.' }),
+  e('what is more', 'dahası; üstelik',
+    'Daha vurgulu ek bilgi vermek için. Yarı resmî bir ifadedir; Task 1\'de seyrek kullan, Task 2\'de daha uygundur.',
+    ['all'],
+    [
+      'Sales doubled in a year. What is more, profits rose even faster.',
+      'What is more, the proportion of graduates reached 60%.',
+      'Unemployment fell. What is more, wages grew by 5%.',
+    ],
+    { note: 'Cümle başında kullanılır ve virgül ardından gelir.' }),
+]
