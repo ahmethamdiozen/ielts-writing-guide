@@ -63,3 +63,50 @@ describe('task1 charts', () => {
     test('sample >= 120 words', () => { expect(words(c.sample.text)).toBeGreaterThanOrEqual(120) })
   })
 })
+
+import essayTypes from '../src/data/task2/essayTypes.js'
+import general from '../src/data/task2/general.js'
+
+describe('task2 essay types', () => {
+  test('expected ids', () => {
+    expect(essayTypes.map((t) => t.id).sort()).toEqual(
+      ['advantages', 'development', 'discussion', 'mixed', 'opinion', 'problem-solution', 'two-part'])
+  })
+  describe.each(essayTypes.map((t) => [t.id, t]))('essay %s', (_id, t) => {
+    test('guidance counts', () => {
+      expect(t.recognize.length).toBeGreaterThanOrEqual(3)
+      expect(t.structure.length).toBeGreaterThanOrEqual(3)
+      expect(t.thesis.length).toBeGreaterThanOrEqual(2)
+      expect(t.phrases.length).toBeGreaterThanOrEqual(6)
+      expect(t.mistakes.length).toBeGreaterThanOrEqual(4)
+    })
+    test('phrases have en/tr/use', () => {
+      for (const p of t.phrases) for (const k of ['en', 'tr', 'use']) expect(typeof p[k], k).toBe('string')
+    })
+    test('sample >= 250 words', () => {
+      expect(typeof t.sample.question).toBe('string')
+      expect(words(t.sample.text)).toBeGreaterThanOrEqual(250)
+    })
+  })
+})
+
+describe('task2 general', () => {
+  test('4 criteria with band9 and tips', () => {
+    expect(general.criteria).toHaveLength(4)
+    for (const c of general.criteria) {
+      expect(c.band9.length).toBeGreaterThanOrEqual(2)
+      expect(c.tips.length).toBeGreaterThanOrEqual(3)
+    }
+  })
+  test('>= 8 idea topics with >= 4 arguments', () => {
+    expect(general.ideas.length).toBeGreaterThanOrEqual(8)
+    for (const i of general.ideas) expect(i.arguments.length, i.topic).toBeGreaterThanOrEqual(4)
+  })
+  test('lists present', () => {
+    expect(general.checklist.length).toBeGreaterThanOrEqual(8)
+    expect(general.thesisFormulas.length).toBeGreaterThanOrEqual(3)
+    expect(general.timing.length).toBeGreaterThanOrEqual(3)
+    expect(general.cohesion.length).toBeGreaterThanOrEqual(3)
+    expect(general.grammarRange.length).toBeGreaterThanOrEqual(3)
+  })
+})

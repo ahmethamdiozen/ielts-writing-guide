@@ -1,0 +1,45 @@
+export default {
+  id: 'opinion',
+  name: 'Opinion (Agree / Disagree)',
+  tr: 'Bir görüşe katılıp katılmadığını soran en yaygın essay türü. "To what extent do you agree or disagree?" ya da "Do you agree or disagree?" şeklinde gelir. Net bir pozisyon almak zorundasın ve her paragrafta bu pozisyonu savunmalısın.',
+  recognize: [
+    '"To what extent do you agree or disagree?"',
+    '"Do you agree or disagree?"',
+    '"What is your opinion?" (görüş sorusu, tek taraflı)',
+    'Soruda bir görüş cümlesi verilir: "Some people think that..."',
+  ],
+  structure: [
+    { part: 'Giriş', goal: 'Konuyu parafraz et + açık bir görüş (thesis) bildir.', tip: 'Soruyu birebir kopyalama. "I strongly agree/disagree", "I partly agree" gibi net bir pozisyon yaz.' },
+    { part: 'Body 1', goal: 'Birinci ana nedenini ver ve genişlet.', tip: 'PEEL: Point – Explain – Example – Link. Her paragraf tek ana fikir içermeli.' },
+    { part: 'Body 2', goal: 'İkinci ana nedenini ver ve genişlet. İsteğe bağlı: karşı görüşü kısaca kabul edip çürüt.', tip: 'Karşı görüşü çürütmek kritik düşünme gösterir (band 8–9).' },
+    { part: 'Sonuç', goal: 'Görüşünü farklı sözcüklerle tekrar et ve ana nedenleri özetle.', tip: 'Yeni fikir ekleme. 2 cümle yeterli.' },
+  ],
+  thesis: [
+    'I strongly agree that [konu], because [neden 1] and [neden 2].',
+    'While some people claim that [konu], I believe that [kendi görüşün].',
+    'I partly agree with this statement, as [neden 1], although [neden 2].',
+    'In my opinion, [konu] is [olumlu/olumsuz], for reasons I will outline below.',
+  ],
+  phrases: [
+    { en: 'I strongly believe that...', tr: 'Kesinlikle inanıyorum ki...', use: 'Giriş/thesis' },
+    { en: 'In my view, ...', tr: 'Bence...', use: 'Görüş bildirirken' },
+    { en: 'The primary reason for this is that...', tr: 'Bunun başlıca nedeni...', use: 'Body 1 başı' },
+    { en: 'Another compelling argument is that...', tr: 'Bir diğer ikna edici argüman...', use: 'Body 2 başı' },
+    { en: 'For instance, ...', tr: 'Örneğin...', use: 'Örnek verirken' },
+    { en: 'Admittedly, some people argue that..., but', tr: 'Doğrusu, bazıları ... diyor ama...', use: 'Karşı görüşü kabul edip çürütme' },
+    { en: 'This is not to say that...', tr: 'Bu şu anlama gelmiyor ki...', use: 'Sınırlama yaparken' },
+    { en: 'To sum up, I firmly believe that...', tr: 'Özetle, kesinlikle inanıyorum ki...', use: 'Sonuç' },
+  ],
+  mistakes: [
+    'Görüşü net bildirmemek ya da paragraflar arasında görüş değiştirmek.',
+    'Sadece "I think" cümleleriyle devam etmek; neden ve örnek eksik kalmak.',
+    'Soruyu kopyalamak.',
+    '"To what extent" sorusunda tamamen katılıp tamamen katılmamaktan korkmak; kısmen katılmak da geçerlidir ama net olmalı.',
+    'Konudan sapmak; sorulan görüşü değil genel konuyu yazmak.',
+    'Memorize edilmiş şablonları zorla uydurmak.',
+  ],
+  sample: {
+    question: 'Some people believe that governments should spend money on public transport rather than building new roads. To what extent do you agree or disagree?',
+    text: 'It is often argued that public transport deserves more government funding than road construction. I strongly agree with this view, as public transport is cleaner, more efficient and fairer to all citizens.\n\nThe primary reason for my position is environmental. Private cars are a major source of air pollution and greenhouse gases, and new roads simply encourage more people to drive. By contrast, a single metro train can replace hundreds of vehicles. For instance, cities such as Singapore have invested heavily in rail networks, and as a result they have some of the cleanest air in Asia despite having a dense population.\n\nAnother compelling argument is that public transport promotes social equality. Not everyone can afford to own a car, particularly the elderly, students and low-income workers. If governments spend billions on motorways, these groups are effectively excluded from jobs and services. Affordable buses and trains, on the other hand, give everyone access to education and employment, which benefits the whole economy. In the long run, a well-connected public transport network also reduces road accidents and the cost of healthcare, so the savings partly repay the initial investment.\n\nAdmittedly, roads remain necessary in rural areas, where population density is too low for trains to be viable. However, this does not justify prioritising road construction nationwide, since most people in the world now live in cities, where congestion is the real problem.\n\nTo sum up, I firmly believe that investing in public transport brings greater environmental, social and economic benefits than building new roads, and governments should reflect this in their budgets.',
+  },
+}

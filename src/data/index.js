@@ -1,0 +1,5 @@
+export { categories, entries } from './task1/vocabulary.js'
+export { default as overview } from './task1/overview.js'
+export { default as charts } from './task1/charts.js'
+export { default as essayTypes } from './task2/essayTypes.js'
+export { default as general } from './task2/general.js'
