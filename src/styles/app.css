@@ -218,6 +218,7 @@ fieldset.field label { display: flex; gap: .5rem; align-items: center; font-weig
 .c-grid { stroke: var(--line); stroke-width: 1; }
 .s0 { fill: var(--accent-1); } .s1 { fill: var(--accent-3); } .s2 { fill: var(--accent-2); } .s3 { fill: var(--marker); }
 .l0 { stroke: var(--accent-1); } .l1 { stroke: var(--accent-3); } .l2 { stroke: var(--accent-2); } .l3 { stroke: var(--marker); }
+.s4 { fill: var(--ink-soft); } .l4 { stroke: var(--ink-soft); }
 .pies { display: flex; flex-wrap: wrap; gap: .8rem; }
 .pies .pie-svg { flex: 1 1 220px; max-width: 260px; }
 .legend { display: flex; flex-wrap: wrap; gap: 1rem; list-style: none; padding: 0; margin: .6rem 0; font-family: var(--font-ui); }
@@ -244,6 +245,7 @@ fieldset.field label { display: flex; gap: .5rem; align-items: center; font-weig
 .chart-svg, .pies, .table-wrap, .process { margin-bottom: 1.5rem; }
 .swatch.s0 { background: var(--accent-1); } .swatch.s1 { background: var(--accent-3); }
 .swatch.s2 { background: var(--accent-2); } .swatch.s3 { background: var(--marker); }
+.swatch.s4 { background: var(--ink-soft); }
 
 /* Adım adım yazma yolu */
 .walk-step { margin: 2.2rem 0; }
@@ -341,3 +343,20 @@ fieldset.field label { display: flex; gap: .5rem; align-items: center; font-weig
 .plan-link { margin-left: 1.8rem; font-family: var(--font-ui); font-weight: 600; }
 .plan-checks { border-collapse: collapse; width: 100%; }
 .plan-checks th, .plan-checks td { border: 1px solid var(--line); padding: .45rem .7rem; text-align: left; }
+
+/* Mock cevap incelemesi */
+.review-band { font-family: var(--font-ui); font-weight: 600; }
+.band-badge { display: inline-block; padding: .15rem .8rem; margin-right: .4rem; border-radius: 999px; background: var(--accent); color: var(--surface); font: 800 1.1rem var(--font-ui); }
+mark.err {
+  background: var(--warn-bg); color: inherit; padding: 0;
+  text-decoration: underline wavy var(--warn-line); text-decoration-thickness: 1.5px; text-underline-offset: 3px;
+}
+.review-card h4 { margin: 0 0 .4rem; color: var(--ink-soft); }
+.review-card.missing { border-left-color: var(--warn-line); border-left-style: dashed; }
+.good-note { padding: .4rem .7rem; border-left: 4px solid var(--accent-2); background: var(--bg); border-radius: 6px; }
+.issues { list-style: none; padding: 0; margin: .6rem 0; display: grid; gap: .5rem; }
+.err-quote { font-style: italic; font-weight: 600; }
+.tagchip.kind-accuracy, .tagchip.kind-task { border-color: var(--warn-line); background: var(--warn-bg); color: var(--ink); }
+.tagchip.kind-grammar { border-color: var(--accent-3); color: var(--accent-3); }
+.tagchip.kind-vocab { border-color: var(--accent-1); color: var(--accent-1); }
+.tagchip.kind-cohesion { border-color: var(--accent-2); color: var(--accent-2); }

@@ -7,5 +7,6 @@ import tourism from './tourism.js'
 import tourists from './tourists.js'
 import recycling from './recycling.js'
 import faculty from './faculty.js'
+import forest from './forest.js'
 
-export default [transport, music, women, cars, water, tourism, tourists, recycling, faculty]
+export default [transport, music, women, cars, water, tourism, tourists, recycling, faculty, forest]

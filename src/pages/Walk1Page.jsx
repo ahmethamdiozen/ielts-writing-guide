@@ -4,6 +4,8 @@ import charts from '../data/walk1/index.js'
 import ChartView from '../components/Charts.jsx'
 import Marked, { plain, wordCount } from '../components/Marked.jsx'
 import { Reveal, Notes } from '../components/Reveal.jsx'
+import Callout from '../components/Callout.jsx'
+import EssayReview from '../components/EssayReview.jsx'
 
 const TAGS = {
   highest: 'En yüksek', lowest: 'En düşük', increase: 'Artış', decrease: 'Azalış', stable: 'Sabit',
@@ -128,6 +130,14 @@ export default function Walk1Page() {
           <p className="prompt" lang="en">{item.prompt}</p>
           <Draw item={item} />
           <p className="muted">{item.source}</p>
+          {item.review && (
+            <Callout title={`Bu chart'a senin cevabın var: band ${item.review.band}`}>
+              <p>Önce adımları kendin dene. Sonra 8. adımda mock sınav cevabının nerede puan kaybettirdiğini cümle cümle gör.</p>
+              <button type="button" className="secondary-btn" onClick={() => document.getElementById('w-8')?.scrollIntoView({ behavior: 'smooth' })}>
+                8. adıma git
+              </button>
+            </Callout>
+          )}
 
           <Section n={1} title="Chart'ı oku">
             <Notes id={`${item.id}-1`} label="Konu, birim ve zaman aralığını yaz" />
@@ -208,6 +218,12 @@ export default function Walk1Page() {
             <Notes id={`${item.id}-7`} label="Tam metnini yaz" rows={8} />
             <Reveal label="Örnek metni göster"><FullText item={item} /></Reveal>
           </Section>
+
+          {item.review && (
+            <Section n={8} title={`Senin cevabın: neden band ${item.review.band}?`}>
+              <EssayReview key={item.id} review={item.review} />
+            </Section>
+          )}
         </main>
       </div>
     </div>
